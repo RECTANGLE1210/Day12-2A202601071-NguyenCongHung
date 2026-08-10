@@ -45,6 +45,14 @@ class Settings(BaseSettings):
     #     agent_api_key: str
 
 
+    port: int = 8000
+    agent_api_key: str
+    redis_url: str = "redis://localhost:6379/0"
+    rate_limit_per_minute: int = 10
+    monthly_budget_usd: float = 10.0
+    log_level: str = "INFO"
+
+
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
     """Đọc cấu hình một lần rồi cache lại (đọc env mỗi request là lãng phí)."""
