@@ -40,11 +40,6 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    # TODO (CP1): khai báo 6 trường theo bảng trên, ví dụ:
-    #     port: int = 8000
-    #     agent_api_key: str
-
-
     port: int = 8000
     agent_api_key: str
     redis_url: str = "redis://localhost:6379/0"
